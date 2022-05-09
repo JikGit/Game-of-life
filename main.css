@@ -1,0 +1,36 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root{
+	--background : black;
+	--elmW: 50;
+	--elmH: 50;
+}
+
+body{
+	background-color: var(--background);
+}
+
+
+#container{
+	width: 80vw;
+	height: 80vw;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	position:absolute;
+	bottom: 50%;
+	/* transform: translateY(-50%); */
+	left: 50%;
+	transform: translateX(-50%) translateY(50%);
+}
+
+#container > div.piece{
+	width: calc(100 / var(--elmW) * 1%);
+	height: calc(100 / var(--elmH) * 1%);
+	border: 1px solid white;
+	align-self:stretch;
+}
